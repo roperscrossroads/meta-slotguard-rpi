@@ -1,0 +1,17 @@
+header:
+  version: 19
+  includes:
+    - ../meta-slotguard/kas/meta-slotguard.yml
+
+repos:
+  meta-slotguard-rpi:
+    path: meta-slotguard-rpi
+
+  meta-raspberrypi:
+    url: https://git.yoctoproject.org/meta-raspberrypi
+    branch: wrynose
+    commit: f62c67921474370829d24a4fa01ef88543f3906b
+
+local_conf_header:
+  rpi: |
+    RPI_USE_U_BOOT = "1"

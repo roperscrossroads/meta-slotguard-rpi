@@ -1,0 +1,9 @@
+
+part --source rawcopy --sourceparams="file=uboot-env-blank.bin" --no-table --align 4096
+
+part /boot --source bootimg-partition --fstype=vfat --label boot --align 8192 --fixed-size 128 --active
+
+part /    --source rootfs --fstype=ext4 --label rootfsA --align 1024 --fixed-size 1024
+part      --source rootfs --fstype=ext4 --label rootfsB --align 1024 --fixed-size 1024
+
+part /data --fstype=ext4 --label data --align 1024 --fixed-size 8192
